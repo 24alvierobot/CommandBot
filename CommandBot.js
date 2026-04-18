@@ -7,10 +7,10 @@ const rl = readline.createInterface({
 });
 
 const bot = mineflayer.createBot({
-  host: 'TestBotsHub.aternos.me',
-  port: 11670,
+  host: 'OOH1-euC4.aternos.me',
+  port: 23159,
   username: 'TestBot',
-  version: '1.16.5',
+  version: '26.1.1',
 });
 
 bot.on('login', () => {
