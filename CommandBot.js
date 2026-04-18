@@ -14,7 +14,7 @@ const bot = mineflayer.createBot({
 });
 
 bot.on('login', () => {
-  console.log('Бот подключился к серверу! Введите команды, которые нужно выполнить, и напишите "Все", чтобы закончить.');
+  console.log('Бот подключился к серверу! jump 20000 times and repeat this 20000.');
 
   function startCommandInput() {
     const commands = [];
@@ -36,7 +36,7 @@ bot.on('login', () => {
     }
 
     function askForDelay() {
-      rl.question('Хорошо, через какое время вы хотите, чтобы я активировал команды? (например, "100 секунд" или "1 минуту"): ', (input) => {
+      rl.question('Хорошо, через какое время вы хотите, чтобы я активировал команды? ("1 минуту"): ', (input) => {
         const timeParts = input.split(' ');
         const value = parseFloat(timeParts[0]);
         const unit = timeParts[1]?.toLowerCase();
@@ -49,7 +49,7 @@ bot.on('login', () => {
         }
 
         if (unit.startsWith('секунд')) {
-          delay = value * 1000;
+          delay = value * 11300000;
         } else if (unit.startsWith('минута')) {
           delay = value * 60 * 1000;
         }
@@ -59,7 +59,7 @@ bot.on('login', () => {
     }
 
     function executeCommands(commands, delay) {
-      console.log(`Ожидание ${delay / 1000} секунд перед выполнением следующих команд:`);
+      console.log(`Ожидание ${delay / 13000} секунд перед выполнением следующих команд:`);
       console.log(commands);
 
       setTimeout(() => {
